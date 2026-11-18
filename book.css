@@ -1,0 +1,49 @@
+html {
+  --paper: #faf8f1;
+  --ink: #272823;
+  --accent: #873f36;
+  --rule: #d0c8b7;
+  --text-font: "Iowan Old Style", "Palatino Linotype", Palatino, "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+/* Standalone stylesheet for Pandoc HTML. */
+html {
+  color-scheme: only light;
+  background: var(--paper);
+  color: var(--ink);
+}
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: clamp(1.4rem, 5vw, 3.8rem) clamp(1.25rem, 3vw, 2rem);
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.05rem/1.7 var(--text-font);
+  overflow-wrap: break-word;
+}
+#title-block-header { margin: 0 0 2.5rem; }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+h1.title { margin: 0; }
+h2 { margin: 2.3rem 0 1rem; }
+h3 { margin: 1.4rem 0 0.55rem; }
+#title-block-header p { margin: 0.65rem 0 0; }
+p { margin: 0.75rem 0; }
+a, a:visited { color: var(--accent); text-underline-offset: 0.18em; }
+hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--rule); }
+.line-block { margin: 0.6rem 0 1.6rem; line-height: 2; }
+.line-block strong, td:first-child { font-variant-numeric: tabular-nums; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { padding: 0.35rem 0.8rem 0.35rem 0; text-align: left; vertical-align: top; }
+thead { border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; }
+img { max-width: 100%; height: auto; }
+
+#title-block-header {
+  text-align: center;
+  padding: 1.6rem 0 2.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+h1.title { font-family: inherit; font-size: clamp(1.2rem, 2.9vw, 2rem); font-weight: 500; letter-spacing: -0.035em; }
+#title-block-header .date { color: var(--accent); font-variant-numeric: lining-nums; }
+h2 { font-size: 1.85rem; font-weight: 500; }
+h3 { color: var(--accent); font-size: 1.1rem; font-weight: 600; }
